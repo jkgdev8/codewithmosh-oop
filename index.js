@@ -22,3 +22,7 @@ let employee = {
 };
 
 employee.getWage();
+
+
+// OOp Abstraction
+//
