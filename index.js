@@ -77,6 +77,12 @@
 
 // console.log(another);
 
+// factory Function
+function circle(){
+    return{
+        console.log('hello!');
+    }
+}
 
 
 
