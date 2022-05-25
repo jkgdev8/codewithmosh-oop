@@ -77,14 +77,14 @@
 
 // console.log(another);
 
-// factory Function
-function circle(){
-    return{
-        console.log('hello!');
-    }
+let number = 10;
+
+function increase(number){
+    number++;
 }
 
-
+increase(number);
+console.log(number);
 
 
 
