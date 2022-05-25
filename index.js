@@ -113,6 +113,8 @@ function Circle(radius){
 
 const circle = new Circle(10)
 
+circle.location = {x: 1};
+
 console.log(circle);
 
 
