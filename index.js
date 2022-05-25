@@ -77,15 +77,43 @@
 
 // console.log(another);
 
-let number = 10;
 
-function increase(number){
-    number++;
+
+
+// // Value vs reference types
+
+// // value type
+// let x = 10;
+// let y = x;
+
+// x = 20
+// console.log(x);
+// console.log(y
+//     );
+// // reference type
+// let obj = {value: 10};
+
+// function increase(obj){
+//     obj.value++;
+// }
+
+// increase(obj);
+// console.log(obj);
+
+
+
+
+// Adding or removing properties
+function Circle(radius){
+    this.radius = radius;
+    this.draw = function(){
+        console.log('draw');
+    }
 }
 
-increase(number);
-console.log(number);
+const circle = new Circle(10)
 
+console.log(circle);
 
 
 
