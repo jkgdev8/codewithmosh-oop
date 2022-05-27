@@ -104,18 +104,63 @@
 
 
 // Adding or removing properties
+// function Circle(radius){
+//     this.radius = radius;
+//     this.draw = function(){
+//         console.log('draw');
+//     }
+// }
+
+// const circle = new Circle(10)
+
+// circle.location = {x: 1};
+
+// console.log(circle);
+
+
+
+// // Enumerating Properties
+// function Circle(radius){
+//     this.radius = radius;
+//     this.draw = function(){
+//         console.log('draw');
+//     }
+// }
+
+// const circle = new Circle(10)
+
+// // use for in loop to enumerate objects 
+// for (let key in circle){
+//     if (typeof circle[key] !== 'function')
+//     console.log(key, circle[key]);
+// }
+
+// // to get all the keys in an object, use Object.keys
+// const keys = Object.keys(circle);
+// console.log(keys);
+
+// // checking a property or method in an object use the in operator
+// if ('radius' in circle)
+//  console.log('Circle has a radius');
+
+
+
+
+
+// Abstraction, hide the details show the essentials. DVD methaphor
 function Circle(radius){
     this.radius = radius;
+
+    this.defaultLocation = { x:0, y:0 };
+
+    this.computeOptimumLocation = function(factor){
+        //...
+    }
+
     this.draw = function(){
+        this.computeOptimumLocation();
         console.log('draw');
     }
 }
 
 const circle = new Circle(10)
-
-circle.location = {x: 1};
-
-console.log(circle);
-
-
-
