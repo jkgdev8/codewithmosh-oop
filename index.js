@@ -147,20 +147,170 @@
 
 
 
-// Abstraction, hide the details show the essentials. DVD methaphor
-function Circle(radius){
-    this.radius = radius;
+// // Abstraction, hide the details show the essentials. DVD methaphor
+// function Circle(radius){
+//     this.radius = radius;
 
-    this.defaultLocation = { x:0, y:0 };
+//     this.defaultLocation = { x:0, y:0 };
 
-    this.computeOptimumLocation = function(factor){
-        //...
-    }
+//     this.computeOptimumLocation = function(factor){
+//         //...
+//     }
 
-    this.draw = function(){
-        this.computeOptimumLocation();
-        console.log('draw');
-    }
+//     this.draw = function(){
+//         computeOptimumLocation(0.1);
+        
+//         console.log('draw');
+//     }
+// }
+
+// const circle = new Circle(10)
+
+
+
+
+
+
+// // Private Properties and Methods
+// // Abstraction, hide the details show the essentials. DVD methaphor
+// function Circle(radius){
+//     this.radius = radius;
+//     // check the scope with the let
+//     let defaultLocation = { x:0, y:0 };
+
+//     let computeOptimumLocation = function(factor){
+//         //...
+//     }
+
+//     this.draw = function(){
+//         computeOptimumLocation(0.1);
+//         // defaultLocation
+//         // this.radius in order to access the new Circle object
+//         console.log('draw');
+//     }
+// }
+
+// const circle = new Circle(10)
+
+
+
+
+
+// // Getters and Setters
+// function Circle(radius){
+//     this.radius = radius;
+   
+//     let defaultLocation = { x:0, y:0 };
+
+//     this.getDefaultLocation = function(){
+//         return defaultLocation;
+//     };
+
+//     this.draw = function(){
+//         console.log('draw');
+//     };
+
+//     // getter is a function used to read a property
+//     Object.defineProperty(this, 'defaultLocation', {
+//         get: function(){
+//             return defaultLocation;
+//         },
+//         set: function(value){
+//             if (!value.x || !value.y)
+//              throw new Error('Invalid Location.');
+//             defaultLocation = value;
+
+//         }
+
+//     });
+// }
+// const circle = new Circle(10);
+// circle.defaultLocation = 1;
+
+// circle.draw();
+
+
+// // practice 2 types of functions
+// function circle(greet){
+//     return `Hi my name is ${greet}!`
+    
+// }
+// const circle1 = circle('Julienne')
+// console.log(circle1);
+
+
+// const hello = (greet, poop) =>{
+//     return `Hi my name is also ${greet} ${poop}`
+
+// }
+// const circle2 = hello('Abalos', 'Garcia');
+// console.log(circle2);
+
+
+
+
+// Exercise Stopwatch
+// my method
+
+// function Stopwatch(duration){
+//     this.duration = duration;
+
+//     this.reset = function(){
+
+//     };
+
+//     this.start = function(){
+
+//     };
+
+//     this.stop = function(){
+
+//     };
+
+// };
+// const sw = new Stopwatch(0);
+// sw.duration;
+
+// Mosh Method
+// constructor function
+function Stopwatch(){
+    let startTime, endTime, running, duration = 0;
+
+    this.start = function(){
+        if (running)
+        throw new Error('Stopwatch has already started.');
+
+        running = true;
+
+        startTime = new Date();
+    };
+
+    this.stop = function(){
+        if (!running)
+         throw new Error('Stopwatch has not started.');
+
+         running = false;
+
+         endTime = new Date();
+
+         const seconds = (endTime.getTime() - startTime.getTime()) / 1000;
+         duration += seconds;
+
+    };
+
+    this. reset = function(){
+        startTime = null;
+        endTime = null;
+        running = false;
+        duration = 0;
+
+    };
+
+    Object.defineProperty(this, 'duration',{
+        get: function(){
+            return duration;
+        }
+
+    });
 }
-
-const circle = new Circle(10)
+const sw = new Stopwatch(0);
