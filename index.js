@@ -27,3 +27,9 @@
 
 
 // Property Descriptors
+let person = { name: 'Julienne'};
+
+// for (let key in person)
+//  console.log(key, person[key]);
+
+console.log(Object.keys(person));
