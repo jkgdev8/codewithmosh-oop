@@ -9,3 +9,21 @@
 // Prototypes, once declared both of the x and y variable objects have a parent called 'Objectbase'
 // let x ={};
 // let y = {};
+
+
+
+// // Multilevel Inheritance
+// // Objects created by a given constructor will have the same prototype
+// // All Arrays created by the array constructor will have the same prototype
+// function Circle(radius){
+//     this.radius = radius;
+
+//    this.draw = function(){
+//        console.log('draw');
+//    };
+// }
+
+// const circle = new Circle(10);
+
+
+// Property Descriptors
