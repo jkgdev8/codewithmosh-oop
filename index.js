@@ -33,3 +33,9 @@ let person = { name: 'Julienne'};
 //  console.log(key, person[key]);
 
 console.log(Object.keys(person));
+
+
+
+// mp listings delete all
+//jg
+
