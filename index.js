@@ -26,16 +26,81 @@
 // const circle = new Circle(10);
 
 
-// Property Descriptors
-let person = { name: 'Julienne'};
+// // Property Descriptors
+// let person = { name: 'Julienne'};
+// Object.defineProperty(person, 'name', {
+//     writable: false,
+//     enumerable: false,
+//     configurable: false
+// })
 
-// for (let key in person)
-//  console.log(key, person[key]);
+// person.name='John'
+// // unable to enmurate as well as configure cause the property is false
+// console.log(Object.keys(person));
 
-console.log(Object.keys(person));
+// console.log(person);
+
+
+// // let objectBase = Object.getPrototypeOf(person);
+// // // unable to enumerate
+// // let descriptor = Object.getOwnPropertyDescriptor(objectBase, 'toString');
+
+// // console.log(descriptor);
+
+// // for (let key in person)
+// //  console.log(key);
+
+// // console.log(Object.keys(person));
 
 
 
-// mp listings delete all
-//jg
+
+
+
+
+
+// Constructor Protoypes
+
+
+// function Circle(radius){
+//     this.radius = radius;
+// }
+
+// const circle = new Circle(1);
+// console.log('hello');
+
+
+
+
+
+
+
+
+
+// Protype vs Instance members
+
+function Circle(radius){
+    // Instance properties and methods
+    this.radius = radius;
+
+    this.move = function(){
+        console.log('move');
+    }
+}
+
+// Prototype members
+Circle.prototype.draw = function(){
+    this.move();
+    console.log('draw');
+
+}
+
+
+Circle.prototype.toString = function(){
+    return 'Circle with a radius ' + this.radius;
+}
+
+
+const c1 = new Circle(1);
+const c2 = new Circle(1);
 
