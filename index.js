@@ -77,8 +77,39 @@
 
 
 
-// Protype vs Instance members
+// // Protype vs Instance members
 
+// function Circle(radius){
+//     // Instance properties and methods
+//     this.radius = radius;
+
+//     this.move = function(){
+//         console.log('move');
+//     }
+// }
+
+// // Prototype members
+// Circle.prototype.draw = function(){
+//     this.move();
+//     console.log('draw');
+
+// }
+
+
+// Circle.prototype.toString = function(){
+//     return 'Circle with a radius ' + this.radius;
+// }
+
+// const c1 = new Circle(1);
+// const c2 = new Circle(1);
+// const c3 = new Circle(2);
+// const c4 = new Circle(1);
+
+
+
+
+
+// Iterating Instance and Prototype Members
 function Circle(radius){
     // Instance properties and methods
     this.radius = radius;
@@ -88,24 +119,18 @@ function Circle(radius){
     }
 }
 
+
+const c1 = new Circle(1);
+
 // Prototype members
 Circle.prototype.draw = function(){
-    this.move();
     console.log('draw');
 
 }
 
-
-Circle.prototype.toString = function(){
-    return 'Circle with a radius ' + this.radius;
-}
+console.log(Object.keys(c1));
 
 
-const c1 = new Circle(1);
-const c2 = new Circle(1);
-
-const c3 = new Circle(2);
-const c4 = new Circle(1);
 
 
 
