@@ -207,7 +207,8 @@ function Stopwatch(){
     Object.defineProperty(this, 'duration',{
         get: function(){
             return duration;
-        }
+        },
+        set: function(value){duration = value}
     });
     Object.defineProperty(this, 'startTime',{
         get: function(){
@@ -230,29 +231,29 @@ Stopwatch.prototype.start = function(){
     if (this.running)
         throw new Error('Stopwatch has already started.');
 
-        this.runningrunning = true;
+        this.running = true;
 
-        startTime = new Date();
+        this.startTime = new Date();
 }
 
 Stopwatch.prototype.stop = function(){
-    if (!running)
+    if (!this.running)
          throw new Error('Stopwatch has not started.');
 
-         running = false;
+         this.running = false;
 
-         endTime = new Date();
+         this.endTime = new Date();
 
          const seconds = (endTime.getTime() - startTime.getTime()) / 1000;
-         duration += seconds;
+         this.duration += seconds;
 
 }
 
 Stopwatch.prototype.reset = function(){
-    startTime = null;
-        endTime = null;
-        running = false;
-        duration = 0;
+    this.startTime = null;
+    this.endTime = null;
+    this.running = false;
+    this.duration = 0;
 }
 
 
