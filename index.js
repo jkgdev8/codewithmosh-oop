@@ -196,6 +196,8 @@ Stopwatch.prototype.reset = function(){
         duration = 0;
 }
 
+// document
+
 
 
 
