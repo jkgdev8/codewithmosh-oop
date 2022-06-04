@@ -257,6 +257,12 @@ Stopwatch.prototype.reset = function(){
 }
 
 
+// The fact that you can create a new object, it completely renders the object created
+// This exercise was created for you to show how not to use OOP abstraction. 
+const sw = new Stopwatch();
+sw.duration = 10;
+
+
 
 
 
