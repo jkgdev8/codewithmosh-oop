@@ -261,6 +261,7 @@ Stopwatch.prototype.reset = function(){
 // This exercise was created for you to show how not to use OOP abstraction. 
 const sw = new Stopwatch();
 sw.duration = 10;
+// Doc
 
 
 
