@@ -1,4 +1,4 @@
-// Prototype Inheritance
+// // Prototype Inheritance
 
 function Shape(){
 }
@@ -6,6 +6,9 @@ function Shape(){
 Shape.prototype.duplicate = function(){
     console.log('duplicate');
 }
+
+
+
 
 function Circle(radius){
     this.radius = radius;
@@ -19,4 +22,5 @@ Circle.prototype.draw = function(){
 
 const s = new Shape();
 const c = new Circle(1);
+const x = new Circle(2);
 
