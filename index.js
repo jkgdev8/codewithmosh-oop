@@ -43,7 +43,7 @@ function Circle(radius){
 }
 
 Circle.prototype = Object.create(Shape.prototype)
-// When ever you reset the prototpy of an object, you should also reset the constructor
+// When ever you reset the prototype of an object, you should also reset the constructor
 Circle.prototype.constructor = Circle;
 
 
