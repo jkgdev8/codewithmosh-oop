@@ -133,39 +133,39 @@
 
 
 
-// Method Overriding
+// // Method Overriding
 
 
-function extend(Child, Parent){
-    Child.prototype = Object.create(Parent.prototype);
-    Child.prototype.constructor = Child;
+// function extend(Child, Parent){
+//     Child.prototype = Object.create(Parent.prototype);
+//     Child.prototype.constructor = Child;
     
-}
-function Shape(){
+// }
+// function Shape(){
     
-}
+// }
 
-Shape.prototype.duplicate = function(){
-    console.log('duplicate');
-}
-
-
-function Circle(){
-
-}
-
-extend(Circle, Shape);
-
-Circle.prototype.duplicate = function(){
-    console.log('duplicate circle');
-}
+// Shape.prototype.duplicate = function(){
+//     console.log('duplicate');
+// }
 
 
-const c = new Circle(1);
+// function Circle(){
+
+// }
+
+// extend(Circle, Shape);
+
+// Circle.prototype.duplicate = function(){
+//     console.log('duplicate circle');
+// }
+
+
+// const c = new Circle(1);
 
 
 
-
+// Polymorphism
 
 
 
