@@ -228,8 +228,6 @@ function mixin(target, ...sources){
     Object.assign(target, ...sources);
 
 }
-
-
 const canEat = {
     eat: function(){
         this.hunger--;
@@ -263,7 +261,6 @@ console.log(person);
 // or
 
 Object.assign(Person.prototype, canEat, canWalk);
-
 const person1 = new Person();
 console.log(person1);
 
@@ -273,7 +270,6 @@ function Goldfish(){
 }
 
 Object.assign(Goldfish.prototype, canEat, canSwim);
-
 const fish = new Goldfish();
 console.log(fish);
 
@@ -283,10 +279,12 @@ console.log(fish);
 function Dog(){
 
 }
-
 mixin(Dog.prototype, canEat, canSwim, canWalk);
 const doggie = new Dog();
 console.log(doggie);
+console.log(doggie);
+
+
 
 
 
