@@ -167,49 +167,57 @@
 
 
 
-// Polymorphism(many forms)
+// // Polymorphism(many forms)
 
-function extend(Child, Parent){
-    Child.prototype = Object.create(Parent.prototype);
-    Child.prototype.constructor = Child;
+// function extend(Child, Parent){
+//     Child.prototype = Object.create(Parent.prototype);
+//     Child.prototype.constructor = Child;
     
-}
-function Shape(){
+// }
+// function Shape(){
     
-}
-Shape.prototype.duplicate = function(){
-    console.log('duplicate');
-}
+// }
+// Shape.prototype.duplicate = function(){
+//     console.log('duplicate');
+// }
 
 
-function Circle(){
+// function Circle(){
 
-}
-extend(Circle, Shape);
+// }
+// extend(Circle, Shape);
 
-Circle.prototype.duplicate = function(){
-    console.log('duplicate circle');
-}
-
-
-
-function Square(){
-
-}
-extend(Square, Shape);
-
-Square.prototype.duplicate = function(){
-    console.log('duplicate square');
-}
+// Circle.prototype.duplicate = function(){
+//     console.log('duplicate circle');
+// }
 
 
-const shapes = [
-    new Circle(),
-    new Square()
-];
 
-for(let shape of shapes)
-shape.duplicate();
+// function Square(){
+
+// }
+// extend(Square, Shape);
+
+// Square.prototype.duplicate = function(){
+//     console.log('duplicate square');
+// }
+
+
+// const shapes = [
+//     new Circle(),
+//     new Square()
+// ];
+
+
+// for(let shape of shapes)
+// shape.duplicate();
+
+
+
+
+
+// When to use Inheritance
+
 
 
 
