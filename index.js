@@ -222,68 +222,71 @@
 
 
 
-// Mixins
-// rest operator will collect arguments and turn them into an array
-function mixin(target, ...sources){
-    Object.assign(target, ...sources);
+// // Mixins
+// // rest operator will collect arguments and turn them into an array with the
+// function mixin(target, ...sources){
+//     // rest operator spreading the array
+//     Object.assign(target, ...sources);
 
-}
-const canEat = {
-    eat: function(){
-        this.hunger--;
-        console.log('eating');
+// }
+// const canEat = {
+//     eat: function(){
+//         this.hunger--;
+//         console.log('eating');
 
-    }
-};
+//     }
+// };
 
-const canWalk = {
-    walk: function(){
-        console.log('walkjubf');
+// const canWalk = {
+//     walk: function(){
+//         console.log('walkjubf');
 
-    }
-};
-
-
-const canSwim = {
-    swim: function(){
-        console.log('can swim');
-    }
-};
-
-function Person(){
-
-}
-
-const person = Object.assign({}, canEat, canWalk);
-console.log(person);
+//     }
+// };
 
 
-// or
+// const canSwim = {
+//     swim: function(){
+//         console.log('can swim');
+//     }
+// };
 
-Object.assign(Person.prototype, canEat, canWalk);
-const person1 = new Person();
-console.log(person1);
+// function Person(){
 
+// }
 
-function Goldfish(){
-
-}
-
-Object.assign(Goldfish.prototype, canEat, canSwim);
-const fish = new Goldfish();
-console.log(fish);
+// const person = Object.assign({}, canEat, canWalk);
+// console.log(person);
 
 
-//mixin easier
+// // or use the constructor
 
-function Dog(){
+// mixin(Person.prototype, canEat, canWalk);
+// const person1 = new Person();
+// console.log(person1);
 
-}
-mixin(Dog.prototype, canEat, canSwim, canWalk);
-const doggie = new Dog();
-console.log(doggie);
-console.log(doggie);
 
+// function Goldfish(){
+
+// }
+
+// mixin(Goldfish.prototype, canEat, canSwim);
+// const fish = new Goldfish();
+// console.log(fish);
+
+
+// //mixin easier
+
+// function Dog(){
+
+// }
+// mixin(Dog.prototype, canEat, canSwim, canWalk);
+// const doggie = new Dog();
+// console.log(doggie);
+// console.log(doggie);
+
+
+// Exercise - Prototypical Inheritance
 
 
 
