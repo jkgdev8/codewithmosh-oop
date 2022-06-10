@@ -287,6 +287,67 @@
 
 
 // Exercise - Prototypical Inheritance
+// My Method
+// function HtmlElement(){
+//     this.click = function(){
+//         console.log('click');
+//     }
+
+// }
+
+// HtmlElement.prototype.focus = function(){
+//     console.log('focus');
+// }
+
+// const e = new HtmlElement();
+// console.log(e);
+
+
+// function HtmlSelectElement(){
+//     // HtmlElement.call(this)
+//     this.addItem = function(item){
+//         console.log('add item');
+//     },
+//     this.items = [],
+
+//     this.removeItem = function(item){
+//         console.log('remove item');
+//     }
+
+// }
+// HtmlSelectElement.prototype = Object.create(HtmlElement.prototype)
+// // When ever you reset the prototype of an object, you should also reset the constructor
+// HtmlSelectElement.prototype.constructor = HtmlElement;
+
+// const s = new HtmlSelectElement();
+// console.log(s);
+
+
+// Mosh Method
+function HtmlElement(){
+    this.click = function(){
+        console.log('click');
+    }
+
+}
+
+HtmlElement.prototype.focus = function(){
+    console.log('focus');
+}
+
+
+function HtmlSelectElement(items = []){
+   this.items;
+
+   this.addItem = function(item){
+       this.items.push(item);
+   }
+
+   this.removeItem = function(item){
+       this.items.splice(this.items.indexOf(item), 1);
+   }
+
+}
 
 
 
