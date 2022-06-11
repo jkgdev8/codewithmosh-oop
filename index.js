@@ -322,8 +322,43 @@
 // const s = new HtmlSelectElement();
 // console.log(s);
 
-// Exercise
-// Mosh Method
+// // Exercise
+// // Mosh Method
+// function HtmlElement(){
+//     this.click = function(){
+//         console.log('click');
+//     }
+
+// }
+
+// HtmlElement.prototype.focus = function(){
+//     console.log('focus');
+// }
+
+
+// function HtmlSelectElement(items = []){
+//    this.items = items;
+
+//    this.addItem = function(item){
+//        this.items.push(item);
+//    }
+
+//    this.removeItem = function(item){
+//        this.items.splice(this.items.indexOf(item), 1);
+//    }
+
+// }
+
+// HtmlSelectElement.prototype = new HtmlElement();
+// HtmlSelectElement.prototype.constructor = HtmlSelectElement
+// //vs
+// // if you did object create.prototype, only the focus method would show up and not the click, 
+// // since click is located in the base HtmlElement
+// // HtmlSelectElement.prototype = Object.create(HtmlElement.prototype); 
+
+
+
+// Exercise Polymorphism
 function HtmlElement(){
     this.click = function(){
         console.log('click');
@@ -355,10 +390,6 @@ HtmlSelectElement.prototype.constructor = HtmlSelectElement
 // if you did object create.prototype, only the focus method would show up and not the click, 
 // since click is located in the base HtmlElement
 // HtmlSelectElement.prototype = Object.create(HtmlElement.prototype); 
-
-
-
-// Exercise Polymorphism
 
 
 
