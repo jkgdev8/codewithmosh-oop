@@ -360,6 +360,11 @@
 
 // Exercise Polymorphism
 // My Method
+
+function extend(Child, Parent){
+    Child.prototype = Object.create(Parent.prototype);
+    Child.prototype.constructor = Child;
+}
 function HtmlElement(){
     this.click = function(){
         console.log('click');
@@ -383,10 +388,24 @@ function HtmlSelectElement(items = []){
        this.items.splice(this.items.indexOf(item), 1);
    }
 
+   this.render = function(item){
+       console.log('render');
+       
+
+   }
+
 }
+
+function HtmlImgElement(){
+    
+}
+
+extend(HtmlImgElement,HtmlSelectElement)
 
 HtmlSelectElement.prototype = new HtmlElement();
 HtmlSelectElement.prototype.constructor = HtmlSelectElement
+
+const s = new HtmlSelectElement();
 
 // exercise
 
