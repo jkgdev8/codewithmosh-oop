@@ -359,8 +359,67 @@
 
 
 // Exercise Polymorphism
-// My Method
+// // My Method
 
+// function extend(Child, Parent){
+//     Child.prototype = Object.create(Parent.prototype);
+//     Child.prototype.constructor = Child;
+// }
+// function HtmlElement(){
+//     this.click = function(){
+//         console.log('click');
+//     }
+
+// }
+
+// HtmlElement.prototype.focus = function(){
+//     console.log('focus');
+// }
+
+
+// function HtmlSelectElement(items = []){
+//    this.items = items;
+
+//    this.addItem = function(item){
+//        this.items.push(item);
+//    }
+
+//    this.removeItem = function(item){
+//        this.items.splice(this.items.indexOf(item), 1);
+//    }
+
+//    this.render = function(item){
+//        console.log('render');
+       
+
+//    }
+
+// }
+
+// function HtmlImgElement(){
+//     this.HtmlImgElement = HtmlImgElement
+    
+// }
+
+// extend(HtmlImgElement,HtmlSelectElement)
+
+// HtmlSelectElement.prototype = new HtmlElement();
+// HtmlSelectElement.prototype.constructor = HtmlSelectElement
+
+// const s = new HtmlSelectElement();
+
+// const elements = [
+//     new HtmlSelectElement([1, 2, 3]),
+//     new HtmlImgElement('http://')
+// ];
+// for(let element of elements)
+// console.log(element.render());
+
+// // exercise
+
+
+
+// Mosh Method
 function extend(Child, Parent){
     Child.prototype = Object.create(Parent.prototype);
     Child.prototype.constructor = Child;
@@ -386,19 +445,30 @@ function HtmlSelectElement(items = []){
 
    this.removeItem = function(item){
        this.items.splice(this.items.indexOf(item), 1);
-   }
-
-   this.render = function(item){
-       console.log('render');
+      }
+        // map method returns an array
+   this.render = function(){
+       return  `
+       <select>${this.items.map(item =>`
+       <option>${item}</option>`).join('')}
+       </select>`;
        
-
    }
 
 }
 
-function HtmlImgElement(){
+function HtmlImgElement(src){
+    this.src = src;
+
+    this.render = function(){
+        return `<img src="${this.src} />`
+    }
     
 }
+
+HtmlImgElement.prototype = new HtmlElement();
+HtmlImgElement.prototype.constructor = new HtmlElement;
+
 
 extend(HtmlImgElement,HtmlSelectElement)
 
@@ -407,7 +477,12 @@ HtmlSelectElement.prototype.constructor = HtmlSelectElement
 
 const s = new HtmlSelectElement();
 
-// exercise
+const elements = [
+    new HtmlSelectElement([1, 2, 3]),
+    new HtmlImgElement('http://')
+];
+for(let element of elements)
+console.log(element.render());
 
 
 
