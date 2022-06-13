@@ -359,6 +359,7 @@
 
 
 // Exercise Polymorphism
+// My Method
 function HtmlElement(){
     this.click = function(){
         console.log('click');
@@ -386,11 +387,9 @@ function HtmlSelectElement(items = []){
 
 HtmlSelectElement.prototype = new HtmlElement();
 HtmlSelectElement.prototype.constructor = HtmlSelectElement
-//vs
-// if you did object create.prototype, only the focus method would show up and not the click, 
-// since click is located in the base HtmlElement
-// HtmlSelectElement.prototype = Object.create(HtmlElement.prototype); 
+
 // exercise
+
 
 
 
