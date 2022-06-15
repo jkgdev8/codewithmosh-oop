@@ -11,25 +11,68 @@
 
 
 // body of the class
-class Circle{
-    // used to initialize objects
-    // used for properties
-    constructor(radius){
-        this.radius = radius;
-        this.move = function(){
-            console.log('move');
-        }
+// class Circle{
+//     // used to initialize objects
+//     // used for properties
+//     constructor(radius){
+//         this.radius = radius;
+//         this.move = function(){
+//             console.log('move');
+//         }
 
 
-    }
-    // define methods are defined in the body of the class, if its inside of body it will
-    // result in a prototype
-    draw(){
-        console.log('draw');
+//     }
+//     // define methods are defined in the body of the class, if its inside of body it will
+//     // result in a prototype
+//     draw(){
+//         console.log('draw');
 
-    }
-}
+//     }
+// }
 
-const c = new Circle(1);
-// ex
-// es6 classes
+// const c = new Circle(1);
+// // ex
+// // es6 classes
+
+
+
+
+
+// // Hoisting(raised to the top)
+// sayHello();
+// sayGoodbye();
+// const c = new Circle
+
+
+// // Function Declaration(hoisted)
+// function sayHello(){
+
+// }
+
+// // Function Expression(not hoisted)
+// const sayGoodbye = function(){
+    
+// };
+
+// const number = 1;
+
+
+// // Class Decalaration(not hoisted)
+// class Circle{
+    
+// }
+
+// // Class Expression(not hoisted) expression is not used often
+// const Square = class{
+
+// };
+
+
+
+
+
+// Static Metods
+
+
+
+
