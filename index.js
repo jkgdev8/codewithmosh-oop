@@ -71,8 +71,35 @@
 
 
 
-// Static Metods
+// // Static Metods
+
+// class Circle{
+//     constructor(radius){
+//         this.radius = radius;
+//     }
+
+//     // Instance Method
+//     draw(){
+
+//     }
+
+//     // Static Method(Create utility functions not tied to a particular object )
+//     static parse(str){
+//         const radius = JSON.parse(str).radius;
+//         return new Circle(radius)
+
+//     }
+// }
+
+// // const circle = new Circle(1);
+// const circle = Circle.parse('{"radius": 1}');
+// console.log(circle);
 
 
+// class Math2{
+//     static abs(value){
 
+//     }
+// }
+// Math2.abs
 
