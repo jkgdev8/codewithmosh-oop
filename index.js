@@ -103,3 +103,42 @@
 // }
 // Math2.abs
 
+
+
+
+
+
+
+// // // This Keyword
+
+// // strict mode - js engine will be more sensitive and do error checking
+// 'use strict';
+
+// const Circle = function(){
+//     this.draw = function(){
+//         console.log(this);
+//     }
+// }
+
+// const c = new Circle();
+// // Method Call - Calling a method in an object. THIS keyword will point to the object
+// c.draw();
+
+// const draw = c.draw;
+// console.log(draw);
+// // Function Call - THIS keyword will point to the global object
+// draw();
+
+
+// // By default classes use the 'use strict'; mode
+// class Shape{
+//     dra(){
+//         console.log(this);
+//     }
+// }
+
+// const s = new Shape();
+// const dra = s.dra;
+// dra();
+
+
