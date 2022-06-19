@@ -147,22 +147,29 @@
 
 // Private Members using symbols(abstraction)
 // simple way to implement a private property or method
-const _radius = Symbol();
-const _draw = Symbol();
+// const _radius = Symbol();
+// const _draw = Symbol();
+// class Circle{
+//     constructor(radius){
+//         // this.radius = radius;
+//         this[_radius] = radius;
+//     }
+
+//     [_draw](){
+        
+//     }
+// }
+
+// const c = new Circle(1);
+
+
+
+// Private members using weakmaps
 class Circle{
     constructor(radius){
-        // this.radius = radius;
-        this[_radius] = radius;
-    }
-
-    [_draw](){
-        
+        this.radius = radius;
     }
 }
 
 const c = new Circle(1);
 
-
-
-// new
-// blue
