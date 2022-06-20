@@ -173,3 +173,4 @@ class Circle{
 
 const c = new Circle(1);
 
+const s = new Circle(1);
