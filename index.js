@@ -166,25 +166,26 @@
 
 // Private members using weakmaps(A dictionary, where keys are objects and values can be anything)
 
-// const _radius = new WeakMap();
-// const _move = new WeakMap();
-// class Circle{
-//     constructor(radius){
-//         _radius.set(this, radius);
+const _radius = new WeakMap();
+const _move = new WeakMap();
+class Circle{
+    constructor(radius){
+        _radius.set(this, radius);
 
-//         _move.set(this, () =>{
-//             console.log('move', this);
-//         });
-//     }
+        _move.set(this, () =>{
+            console.log('move', this);
+        });
+    }
 
-//     draw(){
-//         _move.get(this)();
+    draw(){
+        _move.get(this)();
 
-//         console.log('draw');
-//     }
-// }
+        console.log('draw');
+    }
+}
 
-// const c = new Circle(1);
+const c = new Circle(1);
+const s = new Circle(1);
 
-// const s
+
 
