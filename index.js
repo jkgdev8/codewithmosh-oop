@@ -189,26 +189,64 @@
 
 
 
-// Getters & Setters(ES6 classes)
-const _radius = new WeakMap();
+// // Getters & Setters(ES6 classes)
+// const _radius = new WeakMap();
 
-class Circle{
-    constructor(radius){
-        _radius.set(this, radius);
+// class Circle{
+//     constructor(radius){
+//         _radius.set(this, radius);
+//     }
+
+//     get radius(){
+//         return _radius.get(this);
+//     }
+
+//     set radius(value){
+//         if (value <= 0) throw new Error('Invalid radius')
+//         _radius.set(this, value);
+
+//     }
+// }
+
+// const c = new Circle(1);
+
+
+
+
+
+
+
+// Inheritance
+class Shape{
+    // If you have a constructor in the parent class and you add a constructor in the child class inside the child
+    // you need to call the parent constructor within the child class to initialize usiing the super keyword
+    constructor(color){
+        this.color = color;
     }
-
-    get radius(){
-        return _radius.get(this);
-    }
-
-    set radius(value){
-        if (value <= 0) throw new Error('Invalid radius')
-        _radius.set(this, value);
-
+    move(){
+        console.log('move');
     }
 }
 
-const c = new Circle(1);
+class Circle extends Shape{
+    constructor(color, radius){
+        // referencing the parent consturctor which is Shape
+        super(color);
+        this.radius = radius;
+        
+
+    }
+    draw(){
+        console.log('draw');
+    }
+
+}
+
+const c = new Circle('red', 1);
+
+
+
+
 
 
 
