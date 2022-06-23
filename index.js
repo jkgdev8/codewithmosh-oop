@@ -249,23 +249,89 @@
 
 
 // Method Overriding(ES6)
+// The first implmentation will call the child, then if not there move up to the parent
+// with the super keyword you can overide it to call the parent right away
 
-class Shape{
-    move(){
-        console.log('move');
-    }
-}
+// class Shape{
+//     move(){
+//         console.log('move');
+//     }
+// }
 
-class Circle extends Shape{
-    move(){
-        super.move();
-        console.log('circle move');
-    }
+// class Circle extends Shape{
+//     move(){
+
+//         super.move();
+//         console.log('circle move');
+//     }
 
 
-}
+// }
 
-const c = new Circle();
+// const c = new Circle();
+
+
+
+
+// Exercise Es6
+// push method is adding object  to stack
+// pop method is removing object from stack, with the most recent on top push object
+// peek method is return the latest object on stack but does not remove it
+
+// My Method
+
+
+
+
+
+// Mosh Method
+// const _items = new WeakMap();
+// class Stack{
+//     constructor(){
+//         _items.set(this,[]);
+//     }
+    
+//     push(obj){
+//         _items.get(this).push(obj);
+
+//     }
+
+//     pop(){
+//         const items = _items.get(this);
+
+//         if (items.length === 0)
+//             throw new Error ('Stack is empty');
+
+//         return items.pop();
+
+//     }
+
+//     peek(){
+//         const items = _items.get(this);
+
+//         if (items.length === 0)
+//             throw new Error ('Stack is empty');
+
+//         return items[items.length - 1];        
+
+//     }
+
+//     get count(){
+//         return _items.get(this).length;
+//     }
+
+
+// }
+
+// const stack = new Stack();
+
+
+
+
+
+
+
+
 
 
 
