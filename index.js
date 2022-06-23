@@ -216,35 +216,56 @@
 
 
 
-// Inheritance
+// // Inheritance(ES6)
+// class Shape{
+//     // If you have a constructor in the parent class and you add a constructor in the child class inside the child
+//     // you need to call the parent constructor within the child class to initialize usiing the super keyword
+//     constructor(color){
+//         this.color = color;
+//     }
+//     move(){
+//         console.log('move');
+//     }
+// }
+
+// class Circle extends Shape{
+//     constructor(color, radius){
+//         // referencing the parent consturctor which is Shape
+//         super(color);
+//         this.radius = radius;
+
+
+//     }
+//     draw(){
+//         console.log('draw');
+//     }
+
+// }
+
+// const c = new Circle('red', 1);
+
+
+
+
+
+// Method Overriding(ES6)
+
 class Shape{
-    // If you have a constructor in the parent class and you add a constructor in the child class inside the child
-    // you need to call the parent constructor within the child class to initialize usiing the super keyword
-    constructor(color){
-        this.color = color;
-    }
     move(){
         console.log('move');
     }
 }
 
 class Circle extends Shape{
-    constructor(color, radius){
-        // referencing the parent consturctor which is Shape
-        super(color);
-        this.radius = radius;
-        
+    move(){
+        super.move();
+        console.log('circle move');
+    }
 
-    }
-    draw(){
-        console.log('draw');
-    }
 
 }
 
-const c = new Circle('red', 1);
-
-
+const c = new Circle();
 
 
 
