@@ -323,6 +323,7 @@ class Stack{
 }
 
 const stack = new Stack();
+const s = new Stack(1);
 
 // Mosh Method
 // const _items = new WeakMap();
