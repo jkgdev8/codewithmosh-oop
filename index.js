@@ -279,50 +279,50 @@
 // peek method is return the latest object on stack but does not remove it
 
 // My Method
-
 const _items = new WeakMap();
 class Stack{
-    constructor() {
+    constructor(){
         _items.set(this, []);
-        
+
     }
 
     push(obj){
         const items = _items.get(this);
-        items.push(obj);
+        items.get(this).push(obj)
 
     }
 
     pop(){
         const items = _items.get(this);
         if(items === 0)
-         throw new Error('Stack is empty')
-        return items.pop(); 
+        throw new Error('Stack is empty')
 
-        
+        return items.pop();
+
     }
 
     peek(){
         const items = _items.get(this);
         if(items === 0)
-         throw new Error('Stack is empty')
-        
-        return items[items.length - 1];
-        
+        throw new Error('Stack is empty')
+
+        return items[items.length - 1]
+
     }
 
     get count(){
         const items = _items.get(this);
+        if(items === 0)
+        throw new Error('Stack is empty')
+
         return items.length
 
     }
+
+
 }
 
 const stack = new Stack();
-
-
-
-
 
 // Mosh Method
 // const _items = new WeakMap();
