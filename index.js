@@ -14,6 +14,7 @@ const _radius = new WeakMap();
     }
 
     const c = new Circle(10);
-    c.draw();
+    console.log(_radius.get(c));
+    c.draw(); 
 
 
