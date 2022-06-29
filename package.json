@@ -1,0 +1,25 @@
+{
+  "name": "js-basics2",
+  "version": "1.0.0",
+  "description": "OOP# codewithmosh-oop",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel --presets env index.js -o build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkgdev8/codewithmosh-oop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkgdev8/codewithmosh-oop/issues"
+  },
+  "homepage": "https://github.com/jkgdev8/codewithmosh-oop#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
