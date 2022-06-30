@@ -35,7 +35,11 @@
 // npm init -y (creates a file in the folder package.json, its an identifier for an application)
 // FLAG --save-dev it will install as development dependencies they will not be part of the app and be part of deployment
 
-const x = 1;
+// const x = 1;
+
+
+
+// const x = 1;
 
 
 
